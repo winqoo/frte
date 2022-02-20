@@ -5,31 +5,15 @@ import 'package:freshflow_test/app/navigation/page_navigation_keys.dart';
 import 'package:freshflow_test/app/resources/colors.dart';
 import 'package:freshflow_test/feautures/login/data/login_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:freshflow_test/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<StatefulWidget> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
-  Widget build(BuildContext context) => BlocProvider<LoginCubit>(
-        create: (context) => LoginCubit(AuthService())..getCurrentUser(),
-        child: const LoginPageContent(),
-      );
-}
-
-class LoginPageContent extends StatefulWidget {
-  const LoginPageContent({Key? key}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => _LoginPageContentState();
-}
-
-class _LoginPageContentState extends State<LoginPageContent> {
   final GlobalKey<FormBuilderState> _loginForm = GlobalKey<FormBuilderState>();
 
   bool _isPasswordVisible = false;

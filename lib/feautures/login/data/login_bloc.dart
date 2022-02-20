@@ -28,6 +28,7 @@ class LoginBlocState extends Equatable {
   List<Object?> get props => [
         isLoggedIn,
         hasError,
+        isLoading,
       ];
 }
 
@@ -63,5 +64,14 @@ class LoginCubit extends Cubit<LoginBlocState> {
         isLoggedIn: true,
       ));
     }
+  }
+
+  void logOut() async {
+    await auth.signOut();
+    emit(state.copyWith(
+      isLoggedIn: false,
+      hasError: false,
+      isLoading: false,
+    ));
   }
 }
