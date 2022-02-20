@@ -12,6 +12,8 @@ class CartCubitStateLoading extends CartCubitState {}
 
 class CartCubitStateError extends CartCubitState {}
 
+class CartCubitStateEmpty extends CartCubitState {}
+
 class CartCubitStateSet extends CartCubitState {
   final List<CartItem> cartItems;
 
@@ -33,7 +35,7 @@ class CartCubit extends Cubit<CartCubitState> {
       if (items.isNotEmpty) {
         emit(CartCubitStateSet(items));
       } else {
-        emit(CartCubitStateError());
+        emit(CartCubitStateEmpty());
       }
     } catch (e) {
       emit(CartCubitStateError());

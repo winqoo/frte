@@ -53,6 +53,10 @@ class CartPageContent extends StatelessWidget {
                   return const Divider();
                 },
                 itemCount: state.cartItems.length);
+          } else if (state is CartCubitStateEmpty) {
+            return const Center(
+              child: Text('cart is empty'),
+            );
           } else if (state is CartCubitStateError) {
             return SizedBox(
               width: MediaQuery.of(context).size.width,
