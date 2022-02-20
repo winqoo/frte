@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.freshflow_test">
+    package="ai.freshflow.fluttertakehometest">
    <application
         android:label="freshflow_test"
         android:name="${applicationName}"

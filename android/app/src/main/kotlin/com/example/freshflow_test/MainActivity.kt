@@ -1,4 +1,4 @@
-package com.example.freshflow_test
+package ai.freshflow.fluttertakehometest
 
 import io.flutter.embedding.android.FlutterActivity
 

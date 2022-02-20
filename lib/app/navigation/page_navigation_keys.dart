@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
  */
 class PageNavigationKeys {
   static const startRoute = '/';
-  static const ageRoute = '/age';
+  static const cartRoute = '/cart';
   static final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
 
   static GlobalKey<NavigatorState> get navigatorKey => _navigatorKey;
